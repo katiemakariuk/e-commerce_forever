@@ -86,6 +86,7 @@ const Add = ({token}) => {
       <div className='w-full'>
         <p className='mb-2'>Product description</p>
         <textarea onChange={(e)=>setDescription(e.target.value)} value={description} className='w-full max-w-[500px] px-3 py-2 ' type="text" placeholder='Write content here' required></textarea>
+      </div>
         <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8'>
             <div>
                 <p className='mb-2'>Product category</p>
@@ -127,13 +128,12 @@ const Add = ({token}) => {
                     <p className={`${sizes.includes('XXL') ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XXL</p>
                 </div>
             </div>
-            <div className='flex gap-2 mt-2'>    
-                <input onChange={() => setBestseller(prev => !prev )} checked={bestseller} type="checkbox" id="bestseller"/>
+        </div>
+        <div className='flex gap-2 mt-2'>    
+                <input onChange={() => setBestseller(prev => !prev)} checked={bestseller} type="checkbox" id="bestseller"/>
                 <label className='cursor-pointer' htmlFor="bestseller">Add to bestsellers</label>
             </div>
             <button type='submit' className='w-28 py-3 mt-4 bg-black text-white'>ADD</button>
-        </div>
-      </div>
     </form>
   )
 }
